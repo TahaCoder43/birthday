@@ -1,0 +1,42 @@
+there is a lot of stuff left to do 
+
+one of the major things of this program is the AI
+
+first of all you have to make the shooting bots more complex
+
+they should be able to tell where you willl move and shooot the fireball at that position
+
+you have to add the dificiulties so with each dificiulty the enemies would get more smarter
+
+first of all the shootere should have propertuy called changer to true or false
+
+based on the players pass movements it would calcullate if the player constantly changes directions
+
+or if the player moves in one directions
+
+the second property is shouldl have in very hard is the fireball could change the direction one time
+
+in air while it's coming towards the player
+
+this property should be smart in impossible, the shooter should have a property called will_decieve
+
+based on pass movement it would calculate of the player would decieve the fireball changing direction
+
+since the fireball will move in one direction and suddenlay changge the player can decieve it so the 
+
+fireball should have a property where it would tell if the player is good enough that it decieves the 
+
+fireball thus it will move in the opposite direciton in which the player moved, the player may notice 
+
+it and stop decieving the shooter should also be able to note if the player stopped using the strategy
+
+
+Teamwork:
+
+In impossible enemies should have a property where they act as a team, this property should include 
+shielders and attackers and connoring, basically some of then enemies would gather around to act as shield
+and they shouldn't let the player move in oen spot they would only let the player move in one stop as
+the attackers kept pushing the player and the sheilders keep blocking the players path, slowly like this 
+the enemies should push the player to a corner and gaher there and attack the player at the same time
+dealing the most amount of damage to the player, then fireballs should act in cornation, if one fireball is 
+thrown in one direction the other one should be thrown in the other direction

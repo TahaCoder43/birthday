@@ -16,7 +16,7 @@ def movement():
         enemy.move()
 
 def drawing():
-    window.fill("#00ff7f")
+    window.fill("#00561a")
     for Class in Classes[1:]:
         for object in Class.list:
             object.draw()
@@ -45,7 +45,7 @@ def spawning():
         print("This wall's damage is", Wall.list[-1].attack)
         spawning.lastTimes[1] = time
     #Enemy
-    if time % 5 == 0 and time != spawning.lastTimes[2]:
+    if time % 5 == 0 and time != spawning.lastTimes[2] and spawning.lastTimes[2] == 0:
         x = randint(50, 750)
         y = randint(50, 550)
         Enemy.list.append(

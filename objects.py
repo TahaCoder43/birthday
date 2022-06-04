@@ -77,7 +77,8 @@ class Enemy(Object):
         self.attack = self.speed
         self.attackSpeed = attackSpeed
         self.lastDamage = 0
-        self.type = choice("singleDirectional", "multiDirectional", "shooters")
+        self.type = choice(["singleDirectional", "multiDirectional", "shooters"])
+        # self.type = "singleDirectional"
         if self.type == "multiDirectional":
             def move(self):
                 if gerlie.x > self.x:
@@ -88,16 +89,26 @@ class Enemy(Object):
                     self.y += self.speed
                 else:
                     self.y -= self.speed
+            self.move = lambda: move(self)
         elif self.type == "singleDirectional":
             def move(self):
-                if gerlie.x > self.x:
+                print(gerlie.x, self.x)
+                if round(gerlie.x) >  round(self.x):
                     self.x += self.speed
-                elif gerlie.x < self.x:
+                elif round(gerlie.x) < round(self.x):
                     self.x -= self.speed
-                elif gerlie.y > self.y:
+                elif round(gerlie.y) > round(self.y):
                     self.y += self.speed
                 else:
                     self.y -= self.speed
+            self.move = lambda: move(self)
+        else:
+            def shoot(self):
+                
+
+
+class Fireball(object):
+    super().__init__()
 
 
 class Wall(Object):
@@ -106,8 +117,8 @@ class Wall(Object):
         self.initial_x = x
         self.initial_y = y
         self.type = type
-        self.attackSpeed = attackSpeed
         self.lastDamage = 0
+        self.attackSpeed = attackSpeed
         if type == "move":
             self.movement = randint(70, 120)
             self.speed = randint(1, 3) / 10
